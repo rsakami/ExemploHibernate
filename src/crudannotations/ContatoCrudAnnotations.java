@@ -124,7 +124,11 @@ public class ContatoCrudAnnotations {
 	}
 
 	public static void main(String[] args) {
-		ContatoCrudAnnotations contatoCrudAnnotations = new ContatoCrudAnnotations();
+            ContatoCrudAnnotations contato = new ContatoCrudAnnotations();
+            System.out.println(contato.buscaContato(3));
+            
+            
+              /***  ContatoCrudAnnotations contatoCrudAnnotations = new ContatoCrudAnnotations();
 		String[] nomes = {"Solanu", "Lunare", "Venusiana"};
 		String[] fones = {"(47) 3333-4444", "(47) 7777-5555", "(47) 9090-2525"};
 		String[] emails = {"solanu@javapro.com.br", "lunare@javapro.com.br", "venusiana@javapro.com.br"};
@@ -141,5 +145,10 @@ public class ContatoCrudAnnotations {
 			contatoCrudAnnotations.salvar(contatoAnnotations);
 		}
 		System.out.println("Total de registros cadastrados: " + contatoCrudAnnotations.listar().size());
-	}
+	
+        **/
+  
+        }
+        
+      
 }
