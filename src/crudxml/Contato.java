@@ -6,9 +6,10 @@ public class Contato {
 
 	private Integer	codigo;
 	private String	nome;
+        private String  senha;
 	private String	telefone;
 	private String	email;
-	private Date		dataCadastro;
+	private Date	dataCadastro;
 	private String	observacao;
 
 	public Integer getCodigo() {
@@ -25,6 +26,14 @@ public class Contato {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+        
+        public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.nome = senha;
 	}
 
 	public String getTelefone() {

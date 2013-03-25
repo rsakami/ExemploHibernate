@@ -117,24 +117,10 @@ public class ContatoCrudXML {
 		}
 		return contato;
 	}
+        public boolean autenticaUsuario(int id, String pw) {
+        Contato c = buscaContato(id);
+        return pw.equals(c.getSenha());
+    }
 
-	public static void main(String[] args) {
-		ContatoCrudXML contatoCrudXML = new ContatoCrudXML();
-		String[] nomes = {"Fulano", "Beltrano", "Ciclano"};
-		String[] fones = {"(47) 2222-1111", "(47) 7777-5555", "(47) 9090-2525"};
-		String[] emails = {"fulano@teste.com.br", "beltrano@teste.com.br", "ciclano@teste.com.br"};
-		String[] observacoes = {"Novo cliente", "Cliente em dia", "Ligar na quinta"};
-		Contato contato = null;
-		
-		for (int i = 0; i < nomes.length; i++) {
-			contato = new Contato();
-			contato.setNome(nomes[i]);
-			contato.setTelefone(fones[i]);
-			contato.setEmail(emails[i]);
-			contato.setDataCadastro(new Date(System.currentTimeMillis()));
-			contato.setObservacao(observacoes[i]);
-			contatoCrudXML.salvar(contato);
-		}
-		System.out.println("Total de registros cadastrados: " + contatoCrudXML.listar().size());
-	}
+	
 }
