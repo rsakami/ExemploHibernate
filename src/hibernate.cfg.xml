@@ -9,7 +9,7 @@
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/test</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">admin</property>
+		<property name="connection.password">administrador</property>
 
 		<!-- Usando as configurações do C3PO para pool de conexões -->
 		<property name="c3po.min_size">5</property>
