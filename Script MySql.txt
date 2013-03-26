@@ -1,1 +1,9 @@
-CREATE  TABLE `test`.`contato` (  `codigo` INT NOT NULL AUTO_INCREMENT ,  `nome` VARCHAR(50) NULL ,  `telefone` VARCHAR(50) NULL ,  `email` VARCHAR(50) NULL ,  `dt_cad` DATE NULL ,  `obs` VARCHAR(45) NULL ,  PRIMARY KEY (`codigo`) );
+CREATE  TABLE `test`.`contato` (
+	`codigo` INT NOT NULL AUTO_INCREMENT ,  
+	`nome` VARCHAR(50) NULL ,  
+	`senha` VARCHAR(50) NULL ,
+	`telefone` VARCHAR(50) NULL ,  
+	`email` VARCHAR(50) NULL ,  
+	`dt_cad` DATE NULL ,  
+	`obs` VARCHAR(45) NULL ,  
+	PRIMARY KEY (`codigo`) );
