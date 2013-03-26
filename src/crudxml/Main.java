@@ -7,25 +7,24 @@ public class Main {
 
     public static void main(String[] args) {
         adiciona();
-
-
-        buscaContato();
         
-
-       /* if (login == false) {
+        login(3);
+        
+        ContatoCrudXML contato = new ContatoCrudXML();
+        boolean login = contato.autenticaUsuario(3, "senha3");
+       if (login == false) {
             JOptionPane.showMessageDialog(null, "Usuario/Senha invalido");
         } else {
             JOptionPane.showMessageDialog(null, "Bem-Vindo");
-        }*/
+    }
     }
 
-    static void login() {
-    }
+    
 
     static void adiciona() {
         ContatoCrudXML contatoCrudXML = new ContatoCrudXML();
         String[] nomes = {"Fulano", "Beltrano", "Ciclano"};
-        String[] senhas = {"fulano", "beltrano", "ciclano"};
+        String[] senhas = {"senha1", "senha2", "senha3"};
         String[] fones = {"(47) 2222-1111", "(47) 7777-5555", "(47) 9090-2525"};
         String[] emails = {"fulano@teste.com.br", "beltrano@teste.com.br", "ciclano@teste.com.br"};
         String[] observacoes = {"Novo cliente", "Cliente em dia", "Ligar na quinta"};
@@ -44,11 +43,12 @@ public class Main {
         System.out.println("Total de registros cadastrados: " + contatoCrudXML.listar().size());
     }
 
-    static void buscaContato() {
+    static void login(int codigo) {
         ContatoCrudXML contato = new ContatoCrudXML();
-        Contato lista = contato.buscaContato(2);
+        Contato lista = contato.buscaContato(codigo);
         System.out.println(lista.getCodigo());
         System.out.println(lista.getNome());
+        System.out.println(lista.getSenha());
         System.out.println(lista.getTelefone());
         System.out.println(lista.getEmail());
         System.out.println(lista.getObservacao());

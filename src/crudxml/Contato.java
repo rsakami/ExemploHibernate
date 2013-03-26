@@ -33,7 +33,7 @@ public class Contato {
 	}
 
 	public void setSenha(String senha) {
-		this.nome = senha;
+		this.senha = senha;
 	}
 
 	public String getTelefone() {

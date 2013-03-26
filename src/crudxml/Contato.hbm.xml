@@ -8,6 +8,7 @@
 			<generator class="increment"/>
 		</id>
 		<property name="nome"/>
+                <property name="senha"/>
 		<property name="telefone"/>
 		<property name="email"/>
 		<property name="dataCadastro" type="date" column="dt_cad"/>
